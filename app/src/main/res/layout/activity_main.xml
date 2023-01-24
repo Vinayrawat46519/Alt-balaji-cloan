@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <!-- For Scroll View -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Slider"
+            android:textStyle="bold"
+            android:textSize="21dp"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText,SpUsage" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:orientation="vertical"
+        android:layout_height="160dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TRENDING"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rc_view_1"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:orientation="vertical"
+        android:layout_height="160dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ORIGINALS"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rc_view_2"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:orientation="vertical"
+        android:layout_height="160dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RECOMMENDED"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rc_view_3"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:orientation="vertical"
+        android:layout_height="160dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEWS"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rc_view_4"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:orientation="vertical"
+        android:layout_height="160dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOCK UPP EPISODES"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rc_view_5"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:orientation="vertical"
+        android:layout_height="160dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="THE DESIRE BOX"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rc_view_6"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:orientation="vertical"
+        android:layout_height="160dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FEEL THE THRILL"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rc_view_7"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:orientation="vertical"
+        android:layout_height="160dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ROMANTIC TALES"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rc_view_8"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:orientation="vertical"
+        android:layout_height="160dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LIVE YOUNG"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rc_view_9"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+</LinearLayout>
+    </RelativeLayout>
+</ScrollView>
+</LinearLayout>
