@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
             modelRecommended_arr.add(new ModelRecommended(ImageUrl3[i]));
         }
         //First Adapter;
+
         UserAdapter user=new UserAdapter(getApplicationContext(),user_arr);
         //Second Adapter;
         OriginalsAdapter originalsAdapter=new OriginalsAdapter(getApplicationContext(),originalsModels_arr);
