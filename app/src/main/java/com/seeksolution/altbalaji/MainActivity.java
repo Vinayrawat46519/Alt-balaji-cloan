@@ -93,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
         for (int i=0;i<ImageUrl3.length;i++){
             modelRecommended_arr.add(new ModelRecommended(ImageUrl3[i]));
         }
+
         //First Adapter;
 
         UserAdapter user=new UserAdapter(getApplicationContext(),user_arr);
