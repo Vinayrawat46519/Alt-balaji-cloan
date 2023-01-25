@@ -73,6 +73,7 @@ public class AdapterRecommended extends RecyclerView.Adapter<AdapterRecommended.
 
         @Override
         public void onClick(View v) {
+            //this toast
             Toast.makeText(context, "onclick method", Toast.LENGTH_SHORT).show();
         }
     }
