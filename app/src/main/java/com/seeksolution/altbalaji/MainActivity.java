@@ -6,20 +6,26 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.google.android.material.slider.Slider;
 import com.seeksolution.altbalaji.Adapter.AdapterRecommended;
 import com.seeksolution.altbalaji.Adapter.OriginalsAdapter;
+import com.seeksolution.altbalaji.Adapter.SliderAdapter;
 import com.seeksolution.altbalaji.Adapter.UserAdapter;
 import com.seeksolution.altbalaji.Model.ModelRecommended;
 import com.seeksolution.altbalaji.Model.News;
 import com.seeksolution.altbalaji.Model.OriginalsModel;
+import com.seeksolution.altbalaji.Model.SliderModel;
 import com.seeksolution.altbalaji.Model.UserModel;
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
+import com.smarteist.autoimageslider.SliderAnimations;
+import com.smarteist.autoimageslider.SliderView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView ;
-
+    private SliderView sliderView;
     private String[] ImageUrl={
             "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1_5x/sources/r1/cms/prod/928/1360928-v-b808273e5b54",
             "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1_5x/sources/r1/cms/prod/375/1350375-v-108376acc65b",
@@ -44,13 +50,13 @@ public class MainActivity extends AppCompatActivity {
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGhQwbADvuw7twVauT7TP-bSOkfhE9MLzgtw&usqp=CAU",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG1y8I2AM1iyyWb67VffJgV65f_Hkz7hoojg&usqp=CAU",
     };
-    private String[] ImageUrl3={
+    private String[] ImageUrls={
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8VLbeYocqPX72gw-YxktcArJUCkz8qs9Jgw&usqp=CAU",
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGhQwbADvuw7twVauT7TP-bSOkfhE9MLzgtw&usqp=CAU",
-//            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG1y8I2AM1iyyWb67VffJgV65f_Hkz7hoojg&usqp=CAU",
-//            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9Rp1CkE8tioekkh264aGyaBhkTe_Vgi0eXVOgW1oIaxkTP5N1o7ZKFNEnyuHr26kVWeg&usqp=CAU",
-//            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw-JivuG45O0D0FjZE9DFEzQpsCiemBK_KBC5vFRxQTQyu3BoeIq_pUdPxv2LhHbr8qps&usqp=CAU",
-//            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUpQN0iyjum76SE8gixrWHxpsqtg5oJly26CUMioixoIjq4X4ccYzVqwh7YDeCPIUbI3o&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG1y8I2AM1iyyWb67VffJgV65f_Hkz7hoojg&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9Rp1CkE8tioekkh264aGyaBhkTe_Vgi0eXVOgW1oIaxkTP5N1o7ZKFNEnyuHr26kVWeg&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw-JivuG45O0D0FjZE9DFEzQpsCiemBK_KBC5vFRxQTQyu3BoeIq_pUdPxv2LhHbr8qps&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUpQN0iyjum76SE8gixrWHxpsqtg5oJly26CUMioixoIjq4X4ccYzVqwh7YDeCPIUbI3o&usqp=CAU",
 
     };
     private RecyclerView recyclerView1,recyclerView2,recyclerView3,recyclerView4,recyclerView5,recyclerView6,recyclerView7,recyclerView8;
@@ -61,12 +67,15 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<OriginalsModel>originalsModels_arr=new ArrayList<OriginalsModel>();
     //Third ArrayList Start;
     ArrayList<ModelRecommended>modelRecommended_arr=new ArrayList<ModelRecommended>();
+
     //fourth array list;
+    ArrayList<SliderModel>arrayList=new ArrayList<SliderModel>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
+        sliderView=(SliderView) findViewById(R.id.ImageSlider);
         recyclerView=(RecyclerView) findViewById(R.id.rc_view_1);
         recyclerView1=(RecyclerView)findViewById(R.id.rc_view_2);
         recyclerView2=(RecyclerView)findViewById(R.id.rc_view_3);
@@ -90,9 +99,15 @@ public class MainActivity extends AppCompatActivity {
            modelRecommended_arr.add(new ModelRecommended(ImageUrl2[i]));
        }
        //fourth Array data;
-        for (int i=0;i<ImageUrl3.length;i++){
-            modelRecommended_arr.add(new ModelRecommended(ImageUrl3[i]));
-        }
+       for (int i=0;i<ImageUrls.length;i++){
+           arrayList.add(new SliderModel(ImageUrls[i]));
+       }
+        SliderAdapter sliderAdapter=new SliderAdapter(getApplicationContext(),arrayList);
+        sliderView.setAutoCycle(true);
+        sliderView.setSliderAdapter(sliderAdapter);
+        //set your Animation;
+        sliderView.setIndicatorAnimation(IndicatorAnimationType.SLIDE);
+        sliderView.setSliderTransformAnimation(SliderAnimations.CLOCK_SPINTRANSFORMATION);
 
         //First Adapter;
 
@@ -101,6 +116,8 @@ public class MainActivity extends AppCompatActivity {
         OriginalsAdapter originalsAdapter=new OriginalsAdapter(getApplicationContext(),originalsModels_arr);
         //third Adapter Start;
         AdapterRecommended adapterRecommended=new AdapterRecommended(getApplicationContext(),modelRecommended_arr);
+
+
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false));
         recyclerView.setAdapter(user);
         recyclerView1.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false));
