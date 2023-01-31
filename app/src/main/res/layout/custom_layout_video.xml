@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="8dp">
+
+        <VideoView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/video_view"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:text="Title"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:id="@+id/tv_videoframe_title"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Description"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:id="@+id/tv_videoframe_desc"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:text="Playlist"
+        android:textColor="@color/black"
+        android:textSize="22sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv_videoframe_playlist"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

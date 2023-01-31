@@ -64,7 +64,8 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<UserModel>user_arr=new ArrayList<UserModel>();
     //second Array List start
-    ArrayList<OriginalsModel>originalsModels_arr=new ArrayList<OriginalsModel>();
+//    ArrayList<OriginalsModel>originalsModels_arr=new ArrayList<OriginalsModel>();
+    ArrayList<UserModel>originalsModels_arr=new ArrayList<UserModel>();
     //Third ArrayList Start;
     ArrayList<ModelRecommended>modelRecommended_arr=new ArrayList<ModelRecommended>();
 
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
      }
   //second Array data
        for (int i=0;i<ImageUrl1.length;i++){
-           originalsModels_arr.add(new OriginalsModel(ImageUrl1[i]));
+           originalsModels_arr.add(new UserModel(ImageUrl1[i]));
        }
    //Third Array data;
        for (int i=0;i<ImageUrl2.length;i++){
@@ -113,7 +114,8 @@ public class MainActivity extends AppCompatActivity {
 
         UserAdapter user=new UserAdapter(getApplicationContext(),user_arr);
         //Second Adapter;
-        OriginalsAdapter originalsAdapter=new OriginalsAdapter(getApplicationContext(),originalsModels_arr);
+//        OriginalsAdapter originalsAdapter=new OriginalsAdapter(getApplicationContext(),originalsModels_arr);
+        UserAdapter originalsAdapter=new UserAdapter(getApplicationContext(),originalsModels_arr);
         //third Adapter Start;
         AdapterRecommended adapterRecommended=new AdapterRecommended(getApplicationContext(),modelRecommended_arr);
 
