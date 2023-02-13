@@ -1,6 +1,7 @@
 package com.seeksolution.altbalaji.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.seeksolution.altbalaji.Model.ModelRecommended;
 import com.seeksolution.altbalaji.R;
+import com.seeksolution.altbalaji.VideoMainActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -68,13 +70,18 @@ public class AdapterRecommended extends RecyclerView.Adapter<AdapterRecommended.
             imageView1=itemView.findViewById(R.id.image_shimmer);
             shimmerFrameLayout=itemView.findViewById(R.id.trendingList_shimmer);
             imageView=itemView.findViewById(R.id.image_view);
-            imageView.setOnClickListener(this);
+            itemView.setOnClickListener(this);
         }
+
 
         @Override
         public void onClick(View v) {
-            //this toast
-            Toast.makeText(context, "onclick method", Toast.LENGTH_SHORT).show();
+           ModelRecommended item= modelRecommended_arr.get(getAdapterPosition());
+            Toast.makeText(context, ""+item.getImages(), Toast.LENGTH_SHORT).show();
+            Intent intent=new Intent(context, VideoMainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(intent);
+
         }
     }
 }

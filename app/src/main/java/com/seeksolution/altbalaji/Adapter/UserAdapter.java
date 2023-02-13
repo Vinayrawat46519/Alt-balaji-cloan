@@ -1,12 +1,14 @@
 package com.seeksolution.altbalaji.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.seeksolution.altbalaji.Model.UserModel;
 import com.seeksolution.altbalaji.R;
+import com.seeksolution.altbalaji.VideoMainActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -61,7 +64,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
         return user_arr.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public ImageView imageView;
         public ShimmerFrameLayout shimmerFrameLayout;
         public ImageView shimmer_image;
@@ -70,6 +73,17 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
             imageView=itemView.findViewById(R.id.image_view);
             shimmerFrameLayout=itemView.findViewById(R.id.trendingList_shimmer);
             shimmer_image=itemView.findViewById(R.id.image_shimmer);
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            int position=getAdapterPosition();
+            UserModel item=user_arr.get(position);
+            Toast.makeText(context, ""+item.getImgurls(), Toast.LENGTH_SHORT).show();
+            Intent intent=new Intent(context, VideoMainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(intent);
         }
     }
 }

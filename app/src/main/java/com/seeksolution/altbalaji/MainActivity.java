@@ -118,8 +118,6 @@ public class MainActivity extends AppCompatActivity {
         UserAdapter originalsAdapter=new UserAdapter(getApplicationContext(),originalsModels_arr);
         //third Adapter Start;
         AdapterRecommended adapterRecommended=new AdapterRecommended(getApplicationContext(),modelRecommended_arr);
-
-
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false));
         recyclerView.setAdapter(user);
         recyclerView1.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false));
