@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">AltBalaji</string>
+    <string name="app_name">cineplex</string>
+    <string name="prise">\u20B9</string>
+    <string name="more_videos">More Videos :</string>
+    <string name="share">Share</string>
+    <string name="trailer">Trailer</string>
+    <string name="watchlist">Watchlist</string>
+    <string name="description">Description</string>
+    <string name="_2022_documentry_drama_hindi">2022 . Documentry,Drama . Hindi</string>
+    <string name="white_knight">White knight</string>
+    <string name="todo">TODO</string>
+    <string name="hfh">TODO</string>
+    <string name="jcxhuds">TODO</string>
 </resources>

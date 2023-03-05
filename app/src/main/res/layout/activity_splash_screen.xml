@@ -13,7 +13,7 @@
         app:cardElevation="10dp"
         android:id="@+id/Card_view"
         app:cardCornerRadius="20dp"
-        android:foreground="@drawable/olo"
+        android:foreground="@drawable/unnamed"
         android:layout_height="80dp">
 
     </androidx.cardview.widget.CardView>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1089727866526",
+    "project_id": "demootpproject-71243",
+    "storage_bucket": "demootpproject-71243.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089727866526:android:35bbdbd5fd8efb5d5afd8f",
+        "android_client_info": {
+          "package_name": "com.seeksolution.altbalaji"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089727866526-7vkth56t1oeookmgbejdsb8v9q9nglc8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi155RB0iHtGhhrMizjc9a_PEwLzjN76k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1089727866526-7vkth56t1oeookmgbejdsb8v9q9nglc8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

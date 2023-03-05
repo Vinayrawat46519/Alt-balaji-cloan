@@ -1,6 +1,7 @@
 package com.seeksolution.altbalaji.Adapter;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,41 +16,38 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.PrimitiveIterator;
 
-public class SliderAdapter extends SliderViewAdapter<SliderAdapter.MyView>{
+public class SliderAdapter extends SliderViewAdapter<SliderAdapter.hold> {
 
-    private  Context context;
-    private ArrayList<SliderModel>arrayList;
+    public Context context;
+    public ArrayList<SliderModel> sliderModelArrayList;
 
-    public SliderAdapter(Context context, ArrayList<SliderModel> arrayList) {
+    public SliderAdapter(Context context, ArrayList<SliderModel> sliderModelArrayList) {
         this.context = context;
-        this.arrayList = arrayList;
+        this.sliderModelArrayList = sliderModelArrayList;
     }
 
     @Override
-    public SliderAdapter.MyView onCreateViewHolder(ViewGroup parent) {
-        View view=LayoutInflater.from(context).inflate(R.layout.layout_custom,parent,false);
-        return new MyView(view);
+    public hold onCreateViewHolder(ViewGroup parent) {
+        View view=LayoutInflater.from(context).inflate(R.layout.custom_layout,null);
+        return new hold(view);
     }
 
     @Override
-    public void onBindViewHolder(MyView viewHolder, int position) {
-        Picasso.get().load(arrayList.get(position).getImageUrl3()).into(viewHolder.imageView);
+    public void onBindViewHolder( hold viewHolder, int position) {
+        Picasso.get().load(sliderModelArrayList.get(position).getSlider_pic()).into(viewHolder.imageView);
 
     }
-
-
 
     @Override
     public int getCount() {
-        return arrayList.size();
+        return sliderModelArrayList.size();
     }
 
-    public class MyView extends ViewHolder {
+    public class hold extends SliderViewAdapter.ViewHolder {
         public ImageView imageView;
-        public MyView(View itemView) {
+        public hold(View itemView) {
             super(itemView);
-            imageView=itemView.findViewById(R.id.iv_slider);
+            imageView=itemView.findViewById(R.id.iv_imageSliderView);
         }
-
     }
 }

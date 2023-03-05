@@ -1,13 +1,26 @@
 package com.seeksolution.altbalaji.Model;
 
 public class SliderModel {
-    private String ImageUrl3;
+    public String id;
+    public String slider_name;
+    public String slider_pic;
 
-    public String getImageUrl3() {
-        return ImageUrl3;
+    public String getId() {
+        return id;
     }
 
-    public SliderModel(String imageUrl3) {
-        ImageUrl3 = imageUrl3;
+    public String getSlider_name() {
+        return slider_name;
+    }
+
+    public String getSlider_pic() {
+        return slider_pic;
+    }
+
+    public SliderModel(String id, String slider_name, String slider_pic) {
+        this.id = id;
+        this.slider_name = slider_name;
+        this.slider_pic = slider_pic;
     }
 }
+
