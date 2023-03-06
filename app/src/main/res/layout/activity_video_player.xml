@@ -44,7 +44,7 @@
             android:paddingStart="10dp"
             android:paddingTop="15dp"
             android:text="@string/_2022_documentry_drama_hindi"
-            android:textColor="#3E3D3D"
+            android:textColor="@color/white"
             android:textSize="17sp"
             tools:ignore="TextContrastCheck" />
 

@@ -26,7 +26,7 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView ,recyclerView1,recyclerView2,recyclerView3,recyclerView4,recyclerView5;
     SliderView sliderView;
-//       ArrayList<OriginalsModel> arrayList=new ArrayList<OriginalsModel>();
+
        ArrayList<SliderModel>sliderModelArrayList=new ArrayList<SliderModel>();
        ArrayList<OriginalsModel>arrayList=new ArrayList<>();
        ArrayList<OriginalsModel>CSS;
@@ -53,9 +53,6 @@ public class MainActivity extends AppCompatActivity {
        recyclerView3.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false));
        recyclerView4.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false));
       recyclerView5.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false));
-//        recyclerView6.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false));
-//        recyclerView7.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false));
-//        recyclerView8.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false));
 
 
 //first cartoon response

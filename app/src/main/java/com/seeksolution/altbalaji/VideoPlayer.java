@@ -25,7 +25,7 @@ import retrofit2.Response;
 public class VideoPlayer extends AppCompatActivity {
 
     private VideoView videoView;
-    private String VedioUrl, Vediocategory,Vedioyear, Vediodesc ;
+    private String VedioUrl, Vediocategory,Vedioyear, Vediodesc ,VedioRating;
     private TextView t1 , t2 , t3;
 
     private RecyclerView recyclerView1;
@@ -36,7 +36,7 @@ public class VideoPlayer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_player);
-
+               getSupportActionBar().hide();
         videoView = (VideoView) findViewById(R.id.video_player);
         t1 = (TextView) findViewById(R.id.t1);
         t2 = (TextView) findViewById(R.id.t2);
@@ -46,10 +46,12 @@ public class VideoPlayer extends AppCompatActivity {
         Vediocategory = getIntent().getStringExtra("vedio_category");
         Vedioyear = getIntent().getStringExtra("vedio_year");
         Vediodesc = getIntent().getStringExtra("vedio_desc");
+        VedioRating=getIntent().getStringExtra("video_rating");
 
         t1.setText(Vediocategory);
-        t2.setText(Vedioyear+"   :  "+Vediocategory+"  :  "+"Hindi");
+        t2.setText(Vedioyear+"   :  "+Vediocategory+"  :  "+VedioRating);
         t3.setText(Vediodesc);
+
 
         videoView.setVideoURI(Uri.parse(VedioUrl));   //Raw folder => Audio vedio file => local Video
 

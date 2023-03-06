@@ -8,6 +8,7 @@
         android:layout_width="150dp"
         app:cardCornerRadius="20dp"
         android:elevation="10dp"
+        android:foreground="@drawable/bordercustom"
         app:cardElevation="10dp"
         android:layout_marginLeft="8dp"
         android:layout_height="120dp">
